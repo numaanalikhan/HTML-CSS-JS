@@ -1,120 +1,51 @@
-body{
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
 }
 
-.container{
+.wrapper{
+    width: 90vw;
+    height: 90vh;
+    padding: 50px;
     display: flex;
-    gap:20px
+    justify-content: center;
+    gap: 20px;
 }
 
-.panel {
-    border-radius: 40px;
+.panel{
+    width: 10%;
+    border-radius: 50px;
+    background-position: bottom;
+    background-size: cover;
     position: relative;
-    width: 80px;
-    height: 80vh;
-   transition:  all 700ms ease-in;
+    cursor: pointer;
+    transition: all 700ms ease-in ;
+    
 }
-
 .panel.active{
-    width: 675px;
+    width: 80%;
 }
 
-.panel h3{
-    font-size: 24px;
+
+.panel h2{
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    margin: 0;
-    opacity: 0;
+    bottom: 25px;
+    left: 15px;
     color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    opacity: 0;
 }
 
-.panel.active h3{
+.panel.active h2 {
     opacity: 1;
-    transition: 0.3s ease-in 0.4s;
-}
-
-
-@media (max-width:1220px){
-    .panel.active{
-        width: 675px;
-    }
-    .panel {
-        border-radius: 40px;
-        position: relative;
-        width: 80px;
-        height: 80vh;
-       transition:  all 700ms ease-in;
-    }
-}
-  
-@media (max-width:1000px){
-    .panel.active{
-        width: 575px;
-    }
-    .panel {
-        border-radius: 40px;
-        position: relative;
-        width: 70px;
-        height: 80vh;
-       transition:  all 700ms ease-in;
-    }
-}
-  
-@media (max-width:900px){
-    .panel.active{
-        width: 375px;
-    }
-    .panel {
-        border-radius: 40px;
-        position: relative;
-        width: 60px;
-        height: 80vh;
-       transition:  all 700ms ease-in;
-    }
-}
-  
-@media (max-width:730px){
-    .panel.active{
-        width: 325px;
-    }
-    .panel {
-        border-radius: 40px;
-        position: relative;
-        width: 60px;
-        height: 50vh;
-       transition:  all 700ms ease-in;
-    }
-}
-  
-@media (max-width:700px){
-    body{
-        /* height: 100vh; */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-        
-    }
-    .container{
-        display: flex;
-        flex-direction: column;
-        gap:20px;
-        
-    }
-    .panel {
-        border-radius: 40px;
-        position: relative;
-        width: 80vh;
-        height: 80px;
-       transition:  all 700ms ease-in;
-    }
-    .panel.active{
-        height: 325px;
-    }
-}
-  
+    transition:  0.3s ease-in 0.4s;
+  }
